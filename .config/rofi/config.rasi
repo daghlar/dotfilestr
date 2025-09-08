@@ -1,0 +1,262 @@
+/* ===========================================
+   ROFI PROFESSIONAL CONFIGURATION
+   =========================================== */
+
+configuration {
+    modi: "drun,run,window,ssh,combi";
+    show-icons: true;
+    icon-theme: "Papirus";
+    display-drun: "Applications";
+    display-run: "Run";
+    display-window: "Windows";
+    display-ssh: "SSH";
+    display-combi: "All";
+    combi-modi: "drun,run";
+    font: "JetBrains Mono 12";
+    drun-display-format: "{name}";
+    window-format: "{w} · {c} · {t}";
+    disable-history: false;
+    sidebar-mode: false;
+    click-to-exit: true;
+    combi-hide-mode-prefix: true;
+    matching: "fuzzy";
+    tokenize: false;
+    m: "1";
+    lines: 15;
+    columns: 1;
+    fixed-num-lines: true;
+    case-sensitive: false;
+    cycle: true;
+    sorting-method: "normal";
+    sort: true;
+    thread-num: 0;
+    scroll-method: 0;
+    terminal: "kitty";
+    ssh-client: "ssh";
+    ssh-command: "{terminal} -e {ssh-client} {host} [-p {port}]";
+    run-command: "{cmd}";
+    run-list-command: "";
+    run-shell-command: "{terminal} -e {cmd}";
+    window-command: "wmctrl -i -c {window}";
+    kb-primary-paste: "Control+V,Shift+Insert";
+    kb-secondary-paste: "Control+v,Insert";
+    kb-clear-line: "Control+l";
+    kb-move-front: "Control+a";
+    kb-move-end: "Control+e";
+    kb-move-word-back: "Alt+b,Control+Left";
+    kb-move-word-forward: "Alt+f,Control+Right";
+    kb-move-char-back: "Left,Control+b";
+    kb-move-char-forward: "Right,Control+f";
+    kb-remove-word-back: "Control+Alt+h,Control+BackSpace";
+    kb-remove-word-forward: "Control+Alt+d";
+    kb-remove-char-forward: "Delete,Control+d";
+    kb-remove-char-back: "Shift+BackSpace,BackSpace,Control+h";
+    kb-remove-to-eol: "Control+k";
+    kb-remove-to-sol: "Control+u";
+    kb-move-line-up: "Control+Up";
+    kb-move-line-down: "Control+Down";
+    kb-row-left: "Control+Page_Up";
+    kb-row-right: "Control+Page_Down";
+    kb-row-tab: "Control+Tab";
+    kb-row-back-tab: "Control+ISO_Left_Tab";
+    kb-row-select: "Control+space";
+    kb-row-cancel: "Escape,Control+g,Control+bracketleft";
+    kb-row-up: "Up,Control+p,ISO_Left_Tab";
+    kb-row-down: "Down,Control+n,Tab";
+    kb-row-left: "Left,Control+b";
+    kb-row-right: "Right,Control+f";
+    kb-row-page-prev: "Page_Up";
+    kb-row-page-next: "Page_Down";
+    kb-row-first: "Home,Control+Home";
+    kb-row-last: "End,Control+End";
+    kb-row-toggle-cursor: "Control+space";
+    kb-row-accept: "Control+j,Control+m,Return,KP_Enter";
+    kb-row-accept-custom: "Control+Return";
+    kb-row-accept-alt: "Shift+Return";
+    kb-mode-next: "Shift+Right,Control+Tab";
+    kb-mode-previous: "Shift+Left,Control+ISO_Left_Tab";
+    kb-primary-paste: "Control+V,Shift+Insert";
+    kb-secondary-paste: "Control+v,Insert";
+    kb-clear-line: "Control+l";
+    kb-move-front: "Control+a";
+    kb-move-end: "Control+e";
+    kb-move-word-back: "Alt+b,Control+Left";
+    kb-move-word-forward: "Alt+f,Control+Right";
+    kb-move-char-back: "Left,Control+b";
+    kb-move-char-forward: "Right,Control+f";
+    kb-remove-word-back: "Control+Alt+h,Control+BackSpace";
+    kb-remove-word-forward: "Control+Alt+d";
+    kb-remove-char-forward: "Delete,Control+d";
+    kb-remove-char-back: "Shift+BackSpace,BackSpace,Control+h";
+    kb-remove-to-eol: "Control+k";
+    kb-remove-to-sol: "Control+u";
+    kb-move-line-up: "Control+Up";
+    kb-move-line-down: "Control+Down";
+    kb-row-left: "Control+Page_Up";
+    kb-row-right: "Control+Page_Down";
+    kb-row-tab: "Control+Tab";
+    kb-row-back-tab: "Control+ISO_Left_Tab";
+    kb-row-select: "Control+space";
+    kb-row-cancel: "Escape,Control+g,Control+bracketleft";
+    kb-row-up: "Up,Control+p,ISO_Left_Tab";
+    kb-row-down: "Down,Control+n,Tab";
+    kb-row-left: "Left,Control+b";
+    kb-row-right: "Right,Control+f";
+    kb-row-page-prev: "Page_Up";
+    kb-row-page-next: "Page_Down";
+    kb-row-first: "Home,Control+Home";
+    kb-row-last: "End,Control+End";
+    kb-row-toggle-cursor: "Control+space";
+    kb-row-accept: "Control+j,Control+m,Return,KP_Enter";
+    kb-row-accept-custom: "Control+Return";
+    kb-row-accept-alt: "Shift+Return";
+    kb-mode-next: "Shift+Right,Control+Tab";
+    kb-mode-previous: "Shift+Left,Control+ISO_Left_Tab";
+    kb-row-left: "Control+Page_Up";
+    kb-row-right: "Control+Page_Down";
+    kb-row-tab: "Control+Tab";
+    kb-row-back-tab: "Control+ISO_Left_Tab";
+    kb-row-select: "Control+space";
+    kb-row-cancel: "Escape,Control+g,Control+bracketleft";
+    kb-row-up: "Up,Control+p,ISO_Left_Tab";
+    kb-row-down: "Down,Control+n,Tab";
+    kb-row-left: "Left,Control+b";
+    kb-row-right: "Right,Control+f";
+    kb-row-page-prev: "Page_Up";
+    kb-row-page-next: "Page_Down";
+    kb-row-first: "Home,Control+Home";
+    kb-row-last: "End,Control+End";
+    kb-row-toggle-cursor: "Control+space";
+    kb-row-accept: "Control+j,Control+m,Return,KP_Enter";
+    kb-row-accept-custom: "Control+Return";
+    kb-row-accept-alt: "Shift+Return";
+    kb-mode-next: "Shift+Right,Control+Tab";
+    kb-mode-previous: "Shift+Left,Control+ISO_Left_Tab";
+}
+
+@theme "default"
+* {
+    bg-col:  #1e1e2e;
+    bg-col-light: #2d2d44;
+    bg-col-lighter: #3d3d54;
+    border-col: #6c7086;
+    selected-col: #89b4fa;
+    blue: #89b4fa;
+    fg-col: #cdd6f4;
+    fg-col2: #f5c2e7;
+    grey: #6c7086;
+    width: 600;
+    font: "JetBrains Mono 12";
+}
+
+element-text, element-icon, mode-switcher {
+    background-color: inherit;
+    text-color:       inherit;
+}
+
+window {
+    height: 360px;
+    border: 2px solid @border-col;
+    border-radius: 8px;
+    background-color: @bg-col;
+}
+
+mainbox {
+    background-color: @bg-col;
+}
+
+inputbar {
+    children: [prompt,entry];
+    background-color: @bg-col;
+    border-radius: 5px;
+    padding: 2px;
+}
+
+prompt {
+    background-color: @blue;
+    padding: 6px;
+    text-color: @bg-col;
+    border-radius: 3px;
+    margin: 2px;
+}
+
+textbox-prompt-colon {
+    expand: false;
+    str: ":";
+}
+
+entry {
+    padding: 6px;
+    margin: 2px;
+    text-color: @fg-col;
+    background-color: @bg-col;
+}
+
+inputbar {
+    children: [prompt,entry];
+    background-color: @bg-col;
+    border-radius: 5px;
+    padding: 2px;
+}
+
+listview {
+    border: 0px solid @border-col;
+    padding: 6px;
+    margin: 0px;
+    columns: 2;
+    lines: 5;
+    background-color: @bg-col;
+}
+
+element {
+    padding: 5px;
+    background-color: inherit;
+    text-color:       inherit;
+}
+
+element-icon {
+    background-color: inherit;
+}
+
+element selected {
+    background-color:  @selected-col;
+    text-color: @bg-col  ;
+}
+
+mode-switcher {
+    spacing: 0;
+}
+
+button {
+    padding: 10px;
+    background-color: @bg-col-light;
+    text-color: @fg-col;
+    vertical-align: 0.5;
+    horizontal-align: 0.5;
+}
+
+button selected {
+    background-color: @bg-col-lighter;
+    text-color: @fg-col;
+}
+
+message {
+    background-color: @bg-col;
+    margin: 2px;
+    padding: 2px;
+    border-radius: 5px;
+}
+
+textbox {
+    padding: 6px;
+    margin: 2px;
+    text-color: @fg-col;
+    background-color: @bg-col;
+}
+
+error-message {
+    padding: 6px;
+    margin: 2px;
+    text-color: @fg-col;
+    background-color: @bg-col;
+}

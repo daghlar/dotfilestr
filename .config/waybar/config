@@ -1,0 +1,137 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 30,
+    "spacing": 4,
+    "margin-top": 0,
+    "margin-bottom": 0,
+    "margin-left": 0,
+    "margin-right": 0,
+    "modules-left": ["hyprland/workspaces", "hyprland/window"],
+    "modules-center": ["clock"],
+    "modules-right": ["idle_inhibitor", "pulseaudio", "network", "cpu", "memory", "temperature", "battery", "tray"],
+    
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "format": "{icon}",
+        "format-icons": {
+            "1": "",
+            "2": "",
+            "3": "",
+            "4": "",
+            "5": "",
+            "6": "",
+            "7": "",
+            "8": "",
+            "9": "",
+            "10": "",
+            "urgent": "",
+            "focused": "",
+            "default": ""
+        },
+        "persistent_workspaces": {
+            "DP-1": [1, 2, 3, 4, 5],
+            "HDMI-A-1": [6, 7, 8, 9, 10]
+        }
+    },
+    
+    "hyprland/window": {
+        "format": "{}",
+        "separate-outputs": true,
+        "max-length": 50,
+        "rewrite": {
+            "(.*) — Mozilla Firefox": "🌐 $1",
+            "(.*) — Chromium": "🌐 $1",
+            "(.*) — Visual Studio Code": "💻 $1",
+            "(.*) — kitty": "💻 $1",
+            "(.*) — Thunar": "📁 $1"
+        }
+    },
+    
+    "clock": {
+        "timezone": "Europe/Istanbul",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format-alt": "{:%Y-%m-%d}",
+        "format": "{:%H:%M}",
+        "format-icons": ["🌅", "🌞", "🌆", "🌃"]
+    },
+    
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "🔒",
+            "deactivated": "🔓"
+        },
+        "tooltip": "Idle Inhibitor: {status}"
+    },
+    
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-bluetooth": "{icon} {volume}%",
+        "format-bluetooth-muted": "🔇",
+        "format-muted": "🔇",
+        "format-source": "{volume}%",
+        "format-source-muted": "🔇",
+        "format-icons": {
+            "headphone": "🎧",
+            "hands-free": "🎧",
+            "headset": "🎧",
+            "phone": "📞",
+            "portable": "📱",
+            "car": "🚗",
+            "default": ["🔈", "🔉", "🔊"]
+        },
+        "on-click": "pavucontrol"
+    },
+    
+    "network": {
+        "format-wifi": "{icon} {signalStrength}%",
+        "format-ethernet": "{icon} {ipaddr}/{cidr}",
+        "format-linked": "{icon} (No IP)",
+        "format-disconnected": "Disconnected ⚠",
+        "format-alt": "{ifname}: {ipaddr}/{cidr}",
+        "format-icons": {
+            "ethernet": "🌐",
+            "wifi": ["📶", "📶", "📶", "📶", "📶"],
+            "disconnected": "⚠"
+        },
+        "tooltip-format": "{ifname} via {gwaddr}",
+        "tooltip-format-wifi": "{essid} ({signalStrength}%)",
+        "tooltip-format-ethernet": "{ifname}",
+        "tooltip-format-disconnected": "Disconnected"
+    },
+    
+    "cpu": {
+        "format": "{usage}%",
+        "tooltip": "CPU: {usage}%"
+    },
+    
+    "memory": {
+        "format": "{}%",
+        "tooltip": "Memory: {}%"
+    },
+    
+    "temperature": {
+        "critical-threshold": 80,
+        "format": "{temperatureC}°C {icon}",
+        "format-icons": ["❄️", "🌡️", "🔥"]
+    },
+    
+    "battery": {
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}% {icon}",
+        "format-charging": "{capacity}% ⚡",
+        "format-plugged": "{capacity}% 🔌",
+        "format-alt": "{time} {icon}",
+        "format-icons": ["🔋", "🔋", "🔋", "🔋", "🔋"]
+    },
+    
+    "tray": {
+        "spacing": 10,
+        "icon-size": 20
+    }
+}
