@@ -8,8 +8,14 @@ Bu repository, Arch Linux için optimize edilmiş profesyonel Hyprland dotfiles 
 - **Profesyonel Waybar**: Sistem bilgileri, çalışma alanları ve medya kontrolleri
 - **Rofi Launcher**: Hızlı uygulama başlatma ve pencere değiştirme
 - **Kitty Terminal**: Hızlı ve özelleştirilebilir terminal emülatörü
+- **Neovim Konfigürasyonu**: Modern vim editörü ile LSP desteği
+- **Zsh + Oh My Zsh**: Güçlü shell deneyimi ve eklentiler
+- **Swaylock + Wlogout**: Güvenli ekran kilidi ve logout menüsü
+- **Hyprpaper**: Wallpaper yöneticisi
+- **GTK Tema Desteği**: Catppuccin tema entegrasyonu
+- **Font Optimizasyonu**: JetBrains Mono ve Nerd Fonts
 - **Çoklu Tema Desteği**: Catppuccin, Dracula ve Nord temaları
-- **Otomatik Kurulum**: Tek komutla kurulum ve güncelleme
+- **Kapsamlı Kurulum**: Tek komutla tam kurulum
 - **Screenshot Araçları**: Kolay ekran görüntüsü alma
 - **Türkçe Klavye Desteği**: Tam Türkçe klavye konfigürasyonu
 
@@ -35,10 +41,13 @@ Bu repository, Arch Linux için optimize edilmiş profesyonel Hyprland dotfiles 
 
 ```bash
 # Repository'yi klonlayın
-git clone https://github.com/kullanici/hyprland-dotfiles.git
-cd hyprland-dotfiles
+git clone https://github.com/daghlar/dotfilestr.git
+cd dotfilestr
 
-# Kurulum scriptini çalıştırın
+# Kapsamlı kurulum scriptini çalıştırın
+./scripts/setup.sh
+
+# Veya hızlı kurulum için
 ./scripts/install.sh
 ```
 
@@ -148,7 +157,7 @@ Konfigürasyon dosyalarını düzenleyerek:
 ## 📁 Dizin Yapısı
 
 ```
-dotfiles/
+dotfilestr/
 ├── .config/
 │   ├── hypr/
 │   │   └── hyprland.conf
@@ -159,9 +168,23 @@ dotfiles/
 │   │   └── config.rasi
 │   ├── kitty/
 │   │   └── kitty.conf
-│   └── swaylock/
-│       └── config
+│   ├── nvim/
+│   │   └── init.lua
+│   ├── swaylock/
+│   │   └── config
+│   ├── wlogout/
+│   │   ├── layout
+│   │   └── style.css
+│   ├── hyprpaper/
+│   │   └── hyprpaper.conf
+│   ├── gtk-3.0/
+│   │   └── settings.ini
+│   ├── gtk-4.0/
+│   │   └── settings.ini
+│   └── fontconfig/
+│       └── fonts.conf
 ├── scripts/
+│   ├── setup.sh
 │   ├── install.sh
 │   ├── update.sh
 │   └── screenshot.sh
@@ -170,7 +193,14 @@ dotfiles/
 │   ├── dracula.conf
 │   ├── nord.conf
 │   └── apply_theme.sh
-└── README.md
+├── .bashrc
+├── .zshrc
+├── .gitconfig
+├── .inputrc
+├── .gitignore_global
+├── README.md
+├── INSTALL.md
+└── SUMMARY.md
 ```
 
 ## 🚀 Güncelleme
