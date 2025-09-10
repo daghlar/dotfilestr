@@ -1,0 +1,96 @@
+# ===========================================
+# PROFESSIONAL READLINE CONFIGURATION
+# ===========================================
+
+# Enable 8bit input
+set input-meta on
+set output-meta on
+set convert-meta off
+
+# Show all if the matches do not fit in one page
+set page-completions off
+
+# On partial completion, show the first match immediately
+set show-all-if-ambiguous on
+set show-all-if-unmodified on
+
+# Completion is case insensitive
+set completion-ignore-case on
+
+# Show all matches if there are more than 200
+set completion-query-items 200
+
+# Add a trailing slash to directory names
+set mark-directories on
+set mark-symlinked-directories on
+
+# Use visible bell instead of beeping
+set bell-style visible
+
+# Don't add characters after a possible completion
+set disable-completion off
+
+# Use the text that has already been typed as the prefix to search
+set history-search-backward on
+set history-search-forward on
+
+# Use a single line for editing
+set horizontal-scroll-mode off
+
+# Enable keypad
+set enable-keypad on
+
+# Enable meta key
+set enable-meta-key on
+
+# Color completion
+set colored-completion-prefix on
+set colored-stats on
+
+# Menu completion
+set menu-complete-display-prefix on
+set show-mode-in-prompt on
+
+# Vi mode
+set editing-mode emacs
+set keymap emacs
+
+# Key bindings
+"\C-a": beginning-of-line
+"\C-e": end-of-line
+"\C-f": forward-char
+"\C-b": backward-char
+"\C-d": delete-char
+"\C-h": backward-delete-char
+"\C-k": kill-line
+"\C-u": unix-line-discard
+"\C-w": unix-word-rubout
+"\C-y": yank
+"\C-l": clear-screen
+"\C-r": reverse-search-history
+"\C-s": forward-search-history
+"\C-t": transpose-chars
+"\C-v": quoted-insert
+"\C-x\C-e": edit-and-execute-command
+"\C-?": backward-delete-char
+
+# Arrow keys
+"\e[A": history-search-backward
+"\e[B": history-search-forward
+"\e[C": forward-char
+"\e[D": backward-char
+
+# Page up/down
+"\e[5~": history-search-backward
+"\e[6~": history-search-forward
+
+# Home/End
+"\e[H": beginning-of-line
+"\e[F": end-of-line
+
+# Delete
+"\e[3~": delete-char
+
+# Tab completion
+"\t": menu-complete
+"\e[Z": menu-complete-backward
